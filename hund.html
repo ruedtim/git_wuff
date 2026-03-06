@@ -14,13 +14,15 @@
       font-family: Arial, sans-serif;
     }
     .scene {
-      text-align: center;
       position: relative;
+      width: 360px;
+      height: 240px;
     }
     .bubble {
       display: inline-block;
-      position: relative;
-      margin-bottom: 20px;
+      position: absolute;
+      top: 10px;
+      left: 18px;
       padding: 14px 18px;
       background: white;
       border: 3px solid #222;
@@ -28,20 +30,38 @@
       min-width: 220px;
       font-size: 24px;
       font-weight: bold;
+      text-align: center;
     }
     .bubble::after {
       content: "";
       position: absolute;
-      left: 50%;
-      bottom: -16px;
+      right: 34px;
+      bottom: -18px;
       width: 20px;
       height: 20px;
       background: white;
       border-right: 3px solid #222;
       border-bottom: 3px solid #222;
-      transform: translateX(-50%) rotate(45deg);
+      transform: rotate(35deg);
+      border-bottom-right-radius: 4px;
+    }
+    .bubble::before {
+      content: "";
+      position: absolute;
+      right: 18px;
+      bottom: -30px;
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-right: 3px solid #222;
+      border-bottom: 3px solid #222;
+      transform: rotate(35deg);
+      border-bottom-right-radius: 4px;
     }
     .dog {
+      position: absolute;
+      right: 34px;
+      bottom: 16px;
       font-size: 110px;
       display: inline-block;
       animation: hop 1s infinite ease-in-out;
@@ -54,7 +74,9 @@
       75% { transform: translateY(-4px) rotate(-2deg); }
     }
     .hint {
-      margin-top: 18px;
+      position: absolute;
+      left: 18px;
+      bottom: 10px;
       font-size: 14px;
       color: #444;
     }
