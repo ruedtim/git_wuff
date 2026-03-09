@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="de">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,11 +12,13 @@
       background: #f0ece0;
       font-family: Arial, sans-serif;
     }
+
     h1 {
       text-align: center;
       color: #333;
       margin-bottom: 32px;
     }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -23,15 +26,17 @@
       max-width: 1400px;
       margin: 0 auto;
     }
+
     .card {
       background: white;
       border-radius: 20px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
       padding: 18px 18px 14px 18px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     .card h2 {
       margin: 0 0 10px 0;
       font-size: 18px;
@@ -39,17 +44,20 @@
       letter-spacing: 1px;
       text-transform: uppercase;
     }
+
     .dog-name {
       margin-top: 8px;
       font-size: 12px;
       color: #666;
       font-weight: normal;
     }
+
     .scene {
       position: relative;
       width: 300px;
       height: 220px;
     }
+
     /* Sprechblase */
     .bubble {
       position: absolute;
@@ -67,6 +75,7 @@
       z-index: 10;
       word-break: break-word;
     }
+
     .bubble::after {
       content: "";
       position: absolute;
@@ -80,6 +89,7 @@
       transform: rotate(35deg);
       border-bottom-right-radius: 4px;
     }
+
     .bubble::before {
       content: "";
       position: absolute;
@@ -93,6 +103,7 @@
       transform: rotate(35deg);
       border-bottom-right-radius: 4px;
     }
+
     .dog-wrap {
       position: absolute;
       right: 18px;
@@ -100,14 +111,29 @@
       animation: hop 1.1s infinite ease-in-out;
       transform-origin: center bottom;
     }
+
     @keyframes hop {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      25%       { transform: translateY(-9px) rotate(-4deg); }
-      50%       { transform: translateY(0) rotate(4deg); }
-      75%       { transform: translateY(-4px) rotate(-2deg); }
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      25% {
+        transform: translateY(-9px) rotate(-4deg);
+      }
+
+      50% {
+        transform: translateY(0) rotate(4deg);
+      }
+
+      75% {
+        transform: translateY(-4px) rotate(-2deg);
+      }
     }
   </style>
 </head>
+
 <body>
   <h1>🐕 Git-Workshop – Unsere Hunde</h1>
   <div class="grid" id="grid"></div>
@@ -123,14 +149,14 @@
     // BLOCK 1 – ANINA  (Zeilen dieses Blocks: hier nachschauen)
     // ─────────────────────────────────────────────────────────────
     const config_anina = {
-      person:      "Anina",
-      hundName:    "Findelhund 1",
+      person: "Anina",
+      hundName: "Findelhund 1",
       // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
-      fellfarbe:   "braun",
+      fellfarbe: "braun",
       // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
       hintergrund: "wiese",
       // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
-      accessoire:  "keins",
+      accessoire: "keins",
       // Texte – beliebig viele Einträge in den eckigen Klammern
       texte: [
         "Wuff!",
@@ -142,14 +168,14 @@
     // BLOCK 2 – TIM
     // ─────────────────────────────────────────────────────────────
     const config_tim = {
-      person:      "Tim",
-      hundName:    "Ava",
+      person: "Tim",
+      hundName: "Ava",
       // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
-      fellfarbe:   "schwarz",
+      fellfarbe: "schwarz",
       // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
       hintergrund: "stadt",
       // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
-      accessoire:  "krone",
+      accessoire: "krone",
       // Texte – beliebig viele Einträge in den eckigen Klammern
       texte: [
         "Wau!",
@@ -165,14 +191,14 @@
     // BLOCK 3 – SVENJA
     // ─────────────────────────────────────────────────────────────
     const config_svenja = {
-      person:      "Svenja",
-      hundName:    "Findelhund 3",
+      person: "Svenja",
+      hundName: "Findelhund 3",
       // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
-      fellfarbe:   "golden",
+      fellfarbe: "golden",
       // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
       hintergrund: "wiese",
       // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
-      accessoire:  "keins",
+      accessoire: "keins",
       // Texte – beliebig viele Einträge in den eckigen Klammern
       texte: [
         "Jip!",
@@ -184,14 +210,14 @@
     // BLOCK 4 – RAINER
     // ─────────────────────────────────────────────────────────────
     const config_rainer = {
-      person:      "Rainer",
-      hundName:    "Findelhund 4",
+      person: "Rainer",
+      hundName: "Findelhund 4",
       // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
-      fellfarbe:   "weiss",
+      fellfarbe: "weiss",
       // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
       hintergrund: "wiese",
       // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
-      accessoire:  "keins",
+      accessoire: "keins",
       // Texte – beliebig viele Einträge in den eckigen Klammern
       texte: [
         "Winsel!",
@@ -203,14 +229,14 @@
     // BLOCK 5 – CHRISTIAN
     // ─────────────────────────────────────────────────────────────
     const config_christian = {
-      person:      "Christian",
-      hundName:    "Findelhund 5",
+      person: "Christian",
+      hundName: "Findelhund 5",
       // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
-      fellfarbe:   "grau",
+      fellfarbe: "grau",
       // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
       hintergrund: "wiese",
       // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
-      accessoire:  "keins",
+      accessoire: "keins",
       // Texte – beliebig viele Einträge in den eckigen Klammern
       texte: [
         "Woof!",
@@ -222,14 +248,14 @@
     // BLOCK 6 – HELENA
     // ─────────────────────────────────────────────────────────────
     const config_helena = {
-      person:      "Helena",
-      hundName:    "Findelhund 6",
+      person: "Helena",
+      hundName: "Findelhund 6",
       // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
-      fellfarbe:   "braun",
+      fellfarbe: "braun",
       // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
       hintergrund: "wiese",
       // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
-      accessoire:  "keins",
+      accessoire: "keins",
       // Texte – beliebig viele Einträge in den eckigen Klammern
       texte: [
         "Arf!",
@@ -241,14 +267,14 @@
     // BLOCK 7 – JONATHAN
     // ─────────────────────────────────────────────────────────────
     const config_jonathan = {
-      person:      "Jonathan",
-      hundName:    "Findelhund 7",
+      person: "Jonathan",
+      hundName: "Findelhund 7",
       // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
-      fellfarbe:   "weiss",
+      fellfarbe: "weiss",
       // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
       hintergrund: "wiese",
       // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
-      accessoire:  "keins",
+      accessoire: "keins",
       // Texte – beliebig viele Einträge in den eckigen Klammern
       texte: [
         "Yip!",
@@ -260,14 +286,14 @@
     // BLOCK 8 – MICHAEL
     // ─────────────────────────────────────────────────────────────
     const config_michael = {
-      person:      "Michael",
-      hundName:    "Findelhund 8",
+      person: "Michael",
+      hundName: "Findelhund 8",
       // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
-      fellfarbe:   "golden",
+      fellfarbe: "golden",
       // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
       hintergrund: "wiese",
       // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
-      accessoire:  "keins",
+      accessoire: "keins",
       // Texte – beliebig viele Einträge in den eckigen Klammern
       texte: [
         "Bowow!",
@@ -292,11 +318,11 @@
 
     // ── Farbpaletten ──────────────────────────────────────────────
     const fellpaletten = {
-      braun:   { body: "#8B5E3C", bauch: "#C4956A", nase: "#3a1a08", ohr: "#6B4423" },
+      braun: { body: "#8B5E3C", bauch: "#C4956A", nase: "#3a1a08", ohr: "#6B4423" },
       schwarz: { body: "#222222", bauch: "#555555", nase: "#000000", ohr: "#111111" },
-      golden:  { body: "#D4A017", bauch: "#F0C85A", nase: "#5a3200", ohr: "#B8860B" },
-      weiss:   { body: "#EEEEEE", bauch: "#FFFFFF", nase: "#888888", ohr: "#CCCCCC" },
-      grau:    { body: "#888888", bauch: "#BBBBBB", nase: "#333333", ohr: "#666666" }
+      golden: { body: "#D4A017", bauch: "#F0C85A", nase: "#5a3200", ohr: "#B8860B" },
+      weiss: { body: "#EEEEEE", bauch: "#FFFFFF", nase: "#888888", ohr: "#CCCCCC" },
+      grau: { body: "#888888", bauch: "#BBBBBB", nase: "#333333", ohr: "#666666" }
     };
 
     // ── Hintergründe (SVG-Rechteck + Deko) ───────────────────────
@@ -305,15 +331,15 @@
         case "wiese":
           return `
             <rect width="${w}" height="${h}" fill="#87CEEB"/>
-            <rect y="${h*0.65}" width="${w}" height="${h*0.35}" fill="#5aac44"/>
-            <ellipse cx="40" cy="${h*0.62}" rx="28" ry="16" fill="#4a9e33" opacity="0.7"/>
-            <ellipse cx="240" cy="${h*0.60}" rx="22" ry="13" fill="#4a9e33" opacity="0.6"/>
+            <rect y="${h * 0.65}" width="${w}" height="${h * 0.35}" fill="#5aac44"/>
+            <ellipse cx="40" cy="${h * 0.62}" rx="28" ry="16" fill="#4a9e33" opacity="0.7"/>
+            <ellipse cx="240" cy="${h * 0.60}" rx="22" ry="13" fill="#4a9e33" opacity="0.6"/>
             <circle cx="220" cy="30" r="18" fill="#FFE066"/>
           `;
         case "schnee":
           return `
             <rect width="${w}" height="${h}" fill="#cce8f7"/>
-            <rect y="${h*0.65}" width="${w}" height="${h*0.35}" fill="#e8f4fb"/>
+            <rect y="${h * 0.65}" width="${w}" height="${h * 0.35}" fill="#e8f4fb"/>
             <circle cx="50" cy="40" r="10" fill="white" opacity="0.9"/>
             <circle cx="65" cy="32" r="14" fill="white" opacity="0.9"/>
             <circle cx="80" cy="40" r="10" fill="white" opacity="0.9"/>
@@ -327,24 +353,24 @@
         case "strand":
           return `
             <rect width="${w}" height="${h}" fill="#87CEEB"/>
-            <rect y="${h*0.55}" width="${w}" height="${h*0.12}" fill="#4a8fd4" opacity="0.8"/>
-            <rect y="${h*0.65}" width="${w}" height="${h*0.35}" fill="#f5d88a"/>
+            <rect y="${h * 0.55}" width="${w}" height="${h * 0.12}" fill="#4a8fd4" opacity="0.8"/>
+            <rect y="${h * 0.65}" width="${w}" height="${h * 0.35}" fill="#f5d88a"/>
             <circle cx="220" cy="32" r="20" fill="#FFE066"/>
-            <ellipse cx="60" cy="${h*0.58}" rx="18" ry="6" fill="#6ab4e8" opacity="0.5"/>
+            <ellipse cx="60" cy="${h * 0.58}" rx="18" ry="6" fill="#6ab4e8" opacity="0.5"/>
           `;
         case "stadt":
           return `
             <rect width="${w}" height="${h}" fill="#8899bb"/>
-            <rect y="${h*0.65}" width="${w}" height="${h*0.35}" fill="#777"/>
+            <rect y="${h * 0.65}" width="${w}" height="${h * 0.35}" fill="#777"/>
             <!-- Gebäude links -->
-            <rect x="8"  y="${h*0.30}" width="36" height="${h*0.38}" fill="#556"/>
-            <rect x="50" y="${h*0.20}" width="28" height="${h*0.48}" fill="#445"/>
+            <rect x="8"  y="${h * 0.30}" width="36" height="${h * 0.38}" fill="#556"/>
+            <rect x="50" y="${h * 0.20}" width="28" height="${h * 0.48}" fill="#445"/>
             <!-- Fenster -->
-            <rect x="14" y="${h*0.34}" width="8" height="8" fill="#FFE066" opacity="0.9"/>
-            <rect x="28" y="${h*0.34}" width="8" height="8" fill="#FFE066" opacity="0.9"/>
-            <rect x="14" y="${h*0.47}" width="8" height="8" fill="#aac" opacity="0.6"/>
-            <rect x="55" y="${h*0.25}" width="7" height="7" fill="#FFE066" opacity="0.9"/>
-            <rect x="65" y="${h*0.25}" width="7" height="7" fill="#aac" opacity="0.6"/>
+            <rect x="14" y="${h * 0.34}" width="8" height="8" fill="#FFE066" opacity="0.9"/>
+            <rect x="28" y="${h * 0.34}" width="8" height="8" fill="#FFE066" opacity="0.9"/>
+            <rect x="14" y="${h * 0.47}" width="8" height="8" fill="#aac" opacity="0.6"/>
+            <rect x="55" y="${h * 0.25}" width="7" height="7" fill="#FFE066" opacity="0.9"/>
+            <rect x="65" y="${h * 0.25}" width="7" height="7" fill="#aac" opacity="0.6"/>
             <!-- Mond -->
             <circle cx="220" cy="30" r="14" fill="#ffe"/>
             <circle cx="228" cy="24" r="10" fill="#8899bb"/>
@@ -352,13 +378,82 @@
         case "wald":
           return `
             <rect width="${w}" height="${h}" fill="#b8d9a0"/>
-            <rect y="${h*0.65}" width="${w}" height="${h*0.35}" fill="#5a7a3a"/>
+            <rect y="${h * 0.65}" width="${w}" height="${h * 0.35}" fill="#5a7a3a"/>
             <!-- Bäume -->
-            <polygon points="30,${h*0.65} 55,${h*0.20} 80,${h*0.65}" fill="#3a6e28"/>
-            <rect x="50" y="${h*0.60}" width="10" height="${h*0.10}" fill="#7B4F28"/>
-            <polygon points="200,${h*0.65} 225,${h*0.18} 250,${h*0.65}" fill="#3a6e28"/>
-            <rect x="220" y="${h*0.60}" width="10" height="${h*0.10}" fill="#7B4F28"/>
+            <polygon points="30,${h * 0.65} 55,${h * 0.20} 80,${h * 0.65}" fill="#3a6e28"/>
+            <rect x="50" y="${h * 0.60}" width="10" height="${h * 0.10}" fill="#7B4F28"/>
+            <polygon points="200,${h * 0.65} 225,${h * 0.18} 250,${h * 0.65}" fill="#3a6e28"/>
+            <rect x="220" y="${h * 0.60}" width="10" height="${h * 0.10}" fill="#7B4F28"/>
             <circle cx="150" cy="22" r="10" fill="#FFE066"/>
+          `;
+        case "wueste":
+          return `
+            <rect width="${w}" height="${h}" fill="#e8c97a"/>
+            <rect y="${h * 0.65}" width="${w}" height="${h * 0.35}" fill="#d4a843"/>
+            <!-- Dünen -->
+            <ellipse cx="60"  cy="${h * 0.65}" rx="70" ry="18" fill="#c89425"/>
+            <ellipse cx="220" cy="${h * 0.65}" rx="55" ry="14" fill="#c89425"/>
+            <!-- Kaktus -->
+            <rect x="155" y="${h * 0.38}" width="8" height="${h * 0.29}" rx="4" fill="#5a8a2a"/>
+            <rect x="145" y="${h * 0.47}" width="18" height="7" rx="3" fill="#5a8a2a"/>
+            <rect x="159" y="${h * 0.44}" width="14" height="7" rx="3" fill="#5a8a2a"/>
+            <!-- Sonne -->
+            <circle cx="230" cy="32" r="20" fill="#FFD700"/>
+          `;
+        case "berge":
+          return `
+            <rect width="${w}" height="${h}" fill="#a8cfe8"/>
+            <rect y="${h * 0.65}" width="${w}" height="${h * 0.35}" fill="#7a9e6a"/>
+            <!-- Berge hinten -->
+            <polygon points="0,${h * 0.65} 80,${h * 0.18} 160,${h * 0.65}" fill="#888"/>
+            <polygon points="100,${h * 0.65} 190,${h * 0.12} 280,${h * 0.65}" fill="#777"/>
+            <!-- Schneekappe -->
+            <polygon points="65,${h * 0.28} 80,${h * 0.18} 95,${h * 0.28}" fill="white"/>
+            <polygon points="175,${h * 0.22} 190,${h * 0.12} 205,${h * 0.22}" fill="white"/>
+            <!-- Sonne -->
+            <circle cx="40" cy="28" r="16" fill="#FFE066"/>
+          `;
+        case "weltall":
+          return `
+            <rect width="${w}" height="${h}" fill="#0a0a1a"/>
+            <rect y="${h * 0.65}" width="${w}" height="${h * 0.35}" fill="#1a1a3a"/>
+            <!-- Sterne -->
+            <circle cx="20"  cy="15"  r="1.5" fill="white" opacity="0.9"/>
+            <circle cx="55"  cy="40"  r="1"   fill="white" opacity="0.8"/>
+            <circle cx="90"  cy="10"  r="2"   fill="white"/>
+            <circle cx="130" cy="55"  r="1.5" fill="white" opacity="0.9"/>
+            <circle cx="170" cy="20"  r="1"   fill="white"/>
+            <circle cx="210" cy="45"  r="2"   fill="white" opacity="0.8"/>
+            <circle cx="250" cy="12"  r="1.5" fill="white"/>
+            <circle cx="280" cy="58"  r="1"   fill="white" opacity="0.7"/>
+            <circle cx="40"  cy="65"  r="1"   fill="white" opacity="0.6"/>
+            <circle cx="160" cy="80"  r="1.5" fill="white" opacity="0.5"/>
+            <!-- Planet -->
+            <circle cx="240" cy="35" r="22" fill="#c46e22"/>
+            <ellipse cx="240" cy="35" rx="34" ry="9" fill="none" stroke="#e8a050" stroke-width="4" opacity="0.7"/>
+            <!-- Mond -->
+            <circle cx="60" cy="35" r="14" fill="#ddd"/>
+            <circle cx="67" cy="29" r="10" fill="#0a0a1a"/>
+          `;
+        case "haus":
+          return `
+            <!-- Himmel -->
+            <rect width="${w}" height="${h}" fill="#b8d8f0"/>
+            <!-- Boden -->
+            <rect y="${h * 0.65}" width="${w}" height="${h * 0.35}" fill="#6aaa44"/>
+            <!-- Hauswand -->
+            <rect x="60" y="${h * 0.28}" width="${w * 0.58}" height="${h * 0.40}" fill="#e8d5b0" stroke="#c0a870" stroke-width="1.5"/>
+            <!-- Dach -->
+            <polygon points="50,${h * 0.28} ${w * 0.5},${h * 0.05} ${w * 0.70 + 10},${h * 0.28}" fill="#c04020"/>
+            <!-- Tür -->
+            <rect x="${w * 0.37}" y="${h * 0.48}" width="${w * 0.13}" height="${h * 0.20}" rx="3" fill="#7B4F28"/>
+            <circle cx="${w * 0.37 + w * 0.13 - 6}" cy="${h * 0.57}" r="3" fill="#FFD700"/>
+            <!-- Fenster links -->
+            <rect x="75" y="${h * 0.35}" width="30" height="22" rx="3" fill="#a8d8f8" stroke="#888" stroke-width="1.5"/>
+            <line x1="90" y1="${h * 0.35}" x2="90" y2="${h * 0.35 + 22}" stroke="#888" stroke-width="1"/>
+            <line x1="75" y1="${h * 0.35 + 11}" x2="105" y2="${h * 0.35 + 11}" stroke="#888" stroke-width="1"/>
+            <!-- Sonne -->
+            <circle cx="250" cy="30" r="18" fill="#FFE066"/>
           `;
         default:
           return `<rect width="${w}" height="${h}" fill="#e0e8f0"/>`;
@@ -366,12 +461,13 @@
     }
 
     // ── Accessoire-SVG (relativ zum Hundekopf) ────────────────────
-    // dogSize = Gesamthöhe des Hundes; Kopfmittelpunkt bei ca. (dogSize*0.37, dogSize*0.22) vom SVG-Ursprung
+    // Koordinaten exakt wie in hundSVG: hx=s*0.26, hy=s*0.05, hr=s*0.22
+    // Kopfmittelpunkt des Kreises liegt bei (hx, hy+hr)
     function accessoireSVG(typ, s) {
       // s = groesse
-      const headX = s * 0.37;
-      const headY = s * 0.14;
-      const headR = s * 0.19;
+      const headX = s * 0.26;          // = hx
+      const headY = s * 0.05 + s * 0.22; // = hy + hr  (Mitte des Kopfkreises)
+      const headR = s * 0.22;          // = hr
       switch (typ) {
         case "hut":
           return `
@@ -380,17 +476,125 @@
           `;
         case "sonnenbrille":
           return `
-            <rect x="${headX - headR * 0.72}" y="${headY - headR * 0.08}" width="${headR * 0.55}" height="${headR * 0.38}" rx="5" fill="#1a1a2e" opacity="0.9" stroke="#555" stroke-width="1"/>
-            <rect x="${headX + headR * 0.17}" y="${headY - headR * 0.08}" width="${headR * 0.55}" height="${headR * 0.38}" rx="5" fill="#1a1a2e" opacity="0.9" stroke="#555" stroke-width="1"/>
-            <line x1="${headX - headR * 0.17}" y1="${headY + headR * 0.10}" x2="${headX + headR * 0.17}" y2="${headY + headR * 0.10}" stroke="#888" stroke-width="1.5"/>
-            <line x1="${headX - headR * 0.72 - headR * 0.30}" y1="${headY + headR * 0.10}" x2="${headX - headR * 0.72}" y2="${headY + headR * 0.10}" stroke="#888" stroke-width="1.5"/>
-            <line x1="${headX + headR * 0.72}" y1="${headY + headR * 0.10}" x2="${headX + headR * 0.72 + headR * 0.25}" y2="${headY + headR * 0.10}" stroke="#888" stroke-width="1.5"/>
+            <rect x="${headX - headR * 0.72}" y="${headY - headR * 0.30}" width="${headR * 0.55}" height="${headR * 0.38}" rx="5" fill="#1a1a2e" opacity="0.9" stroke="#555" stroke-width="1"/>
+            <rect x="${headX + headR * 0.17}" y="${headY - headR * 0.30}" width="${headR * 0.55}" height="${headR * 0.38}" rx="5" fill="#1a1a2e" opacity="0.9" stroke="#555" stroke-width="1"/>
+            <line x1="${headX - headR * 0.17}" y1="${headY - headR * 0.11}" x2="${headX + headR * 0.17}" y2="${headY - headR * 0.11}" stroke="#888" stroke-width="1.5"/>
+            <line x1="${headX - headR * 0.72 - headR * 0.30}" y1="${headY - headR * 0.11}" x2="${headX - headR * 0.72}" y2="${headY - headR * 0.11}" stroke="#888" stroke-width="1.5"/>
+            <line x1="${headX + headR * 0.72}" y1="${headY - headR * 0.11}" x2="${headX + headR * 0.72 + headR * 0.25}" y2="${headY - headR * 0.11}" stroke="#888" stroke-width="1.5"/>
           `;
         case "halstuch":
           return `
             <path d="M${headX - headR * 0.65} ${s * 0.47} Q${headX} ${s * 0.54} ${headX + headR * 0.65} ${s * 0.47} L${headX + headR * 0.5} ${s * 0.52} Q${headX} ${s * 0.60} ${headX - headR * 0.5} ${s * 0.52} Z"
               fill="#e03030" stroke="#a00" stroke-width="1"/>
-            <polygon points="${headX},${s*0.58} ${headX - headR*0.22},${s*0.68} ${headX + headR*0.22},${s*0.68}" fill="#c02020"/>
+            <polygon points="${headX},${s * 0.58} ${headX - headR * 0.22},${s * 0.68} ${headX + headR * 0.22},${s * 0.68}" fill="#c02020"/>
+          `;
+        case "krone":
+          return `
+            <polygon points="
+              ${headX - headR * 0.85},${headY - headR * 0.85}
+              ${headX - headR * 0.85},${headY - headR * 1.35}
+              ${headX - headR * 0.42},${headY - headR * 1.00}
+              ${headX},${headY - headR * 1.50}
+              ${headX + headR * 0.42},${headY - headR * 1.00}
+              ${headX + headR * 0.85},${headY - headR * 1.35}
+              ${headX + headR * 0.85},${headY - headR * 0.85}
+            " fill="#FFD700" stroke="#B8860B" stroke-width="1.5"/>
+            <circle cx="${headX - headR * 0.55}" cy="${headY - headR * 1.10}" r="${headR * 0.10}" fill="#e03030"/>
+            <circle cx="${headX}"               cy="${headY - headR * 1.45}" r="${headR * 0.10}" fill="#3a8fe8"/>
+            <circle cx="${headX + headR * 0.55}" cy="${headY - headR * 1.10}" r="${headR * 0.10}" fill="#e03030"/>
+          `;
+        case "krawatte":
+          return `
+            <polygon points="
+              ${headX - headR * 0.12},${s * 0.44}
+              ${headX + headR * 0.12},${s * 0.44}
+              ${headX + headR * 0.08},${s * 0.56}
+              ${headX},${s * 0.62}
+              ${headX - headR * 0.08},${s * 0.56}
+            " fill="#cc1111" stroke="#880000" stroke-width="1"/>
+            <polygon points="
+              ${headX - headR * 0.13},${s * 0.41}
+              ${headX + headR * 0.13},${s * 0.41}
+              ${headX + headR * 0.09},${s * 0.45}
+              ${headX - headR * 0.09},${s * 0.45}
+            " fill="#dd2222" stroke="#880000" stroke-width="1"/>
+          `;
+        case "fliege":
+          return `
+            <polygon points="
+              ${headX - headR * 0.55},${s * 0.42}
+              ${headX - headR * 0.10},${s * 0.45}
+              ${headX - headR * 0.55},${s * 0.48}
+            " fill="#1a1aaa" stroke="#000066" stroke-width="1"/>
+            <polygon points="
+              ${headX + headR * 0.55},${s * 0.42}
+              ${headX + headR * 0.10},${s * 0.45}
+              ${headX + headR * 0.55},${s * 0.48}
+            " fill="#1a1aaa" stroke="#000066" stroke-width="1"/>
+            <circle cx="${headX}" cy="${s * 0.45}" r="${headR * 0.13}" fill="#3333cc"/>
+          `;
+        case "halsband":
+          return `
+            <rect x="${headX - headR * 0.75}" y="${s * 0.43}" width="${headR * 1.5}" height="${headR * 0.25}" rx="${headR * 0.12}" fill="#c0392b" stroke="#7b241c" stroke-width="1.2"/>
+            <rect x="${headX - headR * 0.10}" y="${s * 0.43}" width="${headR * 0.20}" height="${headR * 0.30}" rx="2" fill="#f0c040" stroke="#b8860b" stroke-width="1"/>
+          `;
+        case "brille":
+          return `
+            <circle cx="${headX - headR * 0.32}" cy="${headY - headR * 0.20}" r="${headR * 0.28}" fill="none" stroke="#5a3e1b" stroke-width="${s * 0.018}"/>
+            <circle cx="${headX + headR * 0.38}" cy="${headY - headR * 0.20}" r="${headR * 0.28}" fill="none" stroke="#5a3e1b" stroke-width="${s * 0.018}"/>
+            <line x1="${headX - headR * 0.04}" y1="${headY - headR * 0.20}" x2="${headX + headR * 0.10}" y2="${headY - headR * 0.20}" stroke="#5a3e1b" stroke-width="${s * 0.016}"/>
+            <line x1="${headX - headR * 0.60}" y1="${headY - headR * 0.20}" x2="${headX - headR * 0.75}" y2="${headY - headR * 0.15}" stroke="#5a3e1b" stroke-width="${s * 0.016}"/>
+            <line x1="${headX + headR * 0.66}" y1="${headY - headR * 0.20}" x2="${headX + headR * 0.80}" y2="${headY - headR * 0.15}" stroke="#5a3e1b" stroke-width="${s * 0.016}"/>
+          `;
+        case "schleife":
+          return `
+            <polygon points="
+              ${headX - headR * 0.60},${headY - headR * 1.30}
+              ${headX - headR * 0.05},${headY - headR * 1.05}
+              ${headX - headR * 0.60},${headY - headR * 0.80}
+            " fill="#e91e8c" stroke="#a0145a" stroke-width="1"/>
+            <polygon points="
+              ${headX + headR * 0.60},${headY - headR * 1.30}
+              ${headX + headR * 0.05},${headY - headR * 1.05}
+              ${headX + headR * 0.60},${headY - headR * 0.80}
+            " fill="#e91e8c" stroke="#a0145a" stroke-width="1"/>
+            <circle cx="${headX}" cy="${headY - headR * 1.05}" r="${headR * 0.16}" fill="#ff69b4"/>
+          `;
+        case "muetze":
+          return `
+            <ellipse cx="${headX}" cy="${headY - headR * 0.85}" rx="${headR * 1.05}" ry="${headR * 0.22}" fill="#cc3300" stroke="#882200" stroke-width="1.2"/>
+            <path d="M${headX - headR * 0.95},${headY - headR * 0.85}
+                     Q${headX - headR * 0.60},${headY - headR * 1.80}
+                       ${headX + headR * 0.30},${headY - headR * 1.85}
+                     Q${headX + headR * 0.90},${headY - headR * 1.80}
+                       ${headX + headR * 0.95},${headY - headR * 0.85} Z"
+              fill="#cc3300" stroke="#882200" stroke-width="1.2"/>
+            <circle cx="${headX + headR * 0.55}" cy="${headY - headR * 1.90}" r="${headR * 0.22}" fill="white"/>
+          `;
+        case "kappe":
+          return `
+            <path d="M${headX - headR * 0.90},${headY - headR * 0.70}
+                     Q${headX - headR * 0.50},${headY - headR * 1.55}
+                       ${headX + headR * 0.70},${headY - headR * 1.40}
+                     L${headX + headR * 0.90},${headY - headR * 0.70} Z"
+              fill="#1565c0" stroke="#0d47a1" stroke-width="1.2"/>
+            <rect x="${headX - headR * 1.10}" y="${headY - headR * 0.78}" width="${headR * 0.40}" height="${headR * 0.16}" rx="3" fill="#0d47a1"/>
+            <ellipse cx="${headX}" cy="${headY - headR * 0.70}" rx="${headR * 1.05}" ry="${headR * 0.18}" fill="#1976d2" stroke="#0d47a1" stroke-width="1"/>
+          `;
+        case "kopfhoerer":
+          return `
+            <path d="M${headX - headR * 0.80},${headY + headR * 0.20}
+                     A${headR * 0.85},${headR * 0.85} 0 0 1 ${headX + headR * 0.80},${headY + headR * 0.20}"
+              fill="none" stroke="#333" stroke-width="${s * 0.035}" stroke-linecap="round"/>
+            <rect x="${headX - headR * 1.00}" y="${headY + headR * 0.08}" width="${headR * 0.38}" height="${headR * 0.55}" rx="${headR * 0.14}" fill="#444" stroke="#222" stroke-width="1.2"/>
+            <rect x="${headX + headR * 0.62}" y="${headY + headR * 0.08}" width="${headR * 0.38}" height="${headR * 0.55}" rx="${headR * 0.14}" fill="#444" stroke="#222" stroke-width="1.2"/>
+          `;
+        case "blume":
+          return `
+            <circle cx="${headX - headR * 0.20}" cy="${headY - headR * 1.15}" r="${headR * 0.32}" fill="#ff69b4" opacity="0.85"/>
+            <circle cx="${headX + headR * 0.25}" cy="${headY - headR * 1.30}" r="${headR * 0.22}" fill="#ff69b4" opacity="0.75"/>
+            <circle cx="${headX + headR * 0.50}" cy="${headY - headR * 1.05}" r="${headR * 0.20}" fill="#ff9fcc" opacity="0.80"/>
+            <circle cx="${headX - headR * 0.20}" cy="${headY - headR * 1.15}" r="${headR * 0.14}" fill="#FFE066"/>
           `;
         default:
           return "";
@@ -410,49 +614,49 @@
       const hr = s * 0.22;                   // Kopf-Radius
 
       return `
-      <svg width="${s}" height="${s}" viewBox="0 0 ${s} ${s}" xmlns="http://www.w3.org/2000/svg">
+      <svg width="${s}" height="${s * 1.30}" viewBox="0 ${-s * 0.30} ${s} ${s * 1.30}" xmlns="http://www.w3.org/2000/svg">
 
         <!-- Schwanz -->
         <path d="M${bx + bw} ${by + bh * 0.3}
                  Q${s * 1.05} ${by - bh * 0.2}
                    ${s * 0.95} ${by - bh * 0.45}"
-          stroke="${p.body}" stroke-width="${s*0.08}" fill="none" stroke-linecap="round"/>
+          stroke="${p.body}" stroke-width="${s * 0.08}" fill="none" stroke-linecap="round"/>
 
         <!-- Körper -->
-        <ellipse cx="${bx + bw*0.50}" cy="${by + bh*0.45}"
-                 rx="${bw*0.52}" ry="${bh*0.46}" fill="${p.body}"/>
+        <ellipse cx="${bx + bw * 0.50}" cy="${by + bh * 0.45}"
+                 rx="${bw * 0.52}" ry="${bh * 0.46}" fill="${p.body}"/>
         <!-- Bauch -->
-        <ellipse cx="${bx + bw*0.45}" cy="${by + bh*0.52}"
-                 rx="${bw*0.28}" ry="${bh*0.30}" fill="${p.bauch}" opacity="0.7"/>
+        <ellipse cx="${bx + bw * 0.45}" cy="${by + bh * 0.52}"
+                 rx="${bw * 0.28}" ry="${bh * 0.30}" fill="${p.bauch}" opacity="0.7"/>
 
         <!-- Beine (4 Stück) -->
-        <rect x="${bx + bw*0.08}" y="${by + bh*0.68}" width="${s*0.09}" height="${s*0.19}" rx="${s*0.04}" fill="${p.body}"/>
-        <rect x="${bx + bw*0.25}" y="${by + bh*0.72}" width="${s*0.09}" height="${s*0.17}" rx="${s*0.04}" fill="${p.body}"/>
-        <rect x="${bx + bw*0.55}" y="${by + bh*0.68}" width="${s*0.09}" height="${s*0.19}" rx="${s*0.04}" fill="${p.body}"/>
-        <rect x="${bx + bw*0.72}" y="${by + bh*0.72}" width="${s*0.09}" height="${s*0.17}" rx="${s*0.04}" fill="${p.body}"/>
+        <rect x="${bx + bw * 0.08}" y="${by + bh * 0.68}" width="${s * 0.09}" height="${s * 0.19}" rx="${s * 0.04}" fill="${p.body}"/>
+        <rect x="${bx + bw * 0.25}" y="${by + bh * 0.72}" width="${s * 0.09}" height="${s * 0.17}" rx="${s * 0.04}" fill="${p.body}"/>
+        <rect x="${bx + bw * 0.55}" y="${by + bh * 0.68}" width="${s * 0.09}" height="${s * 0.19}" rx="${s * 0.04}" fill="${p.body}"/>
+        <rect x="${bx + bw * 0.72}" y="${by + bh * 0.72}" width="${s * 0.09}" height="${s * 0.17}" rx="${s * 0.04}" fill="${p.body}"/>
 
         <!-- Ohren -->
-        <ellipse cx="${hx - hr*0.55}" cy="${hy + hr*0.10}" rx="${hr*0.30}" ry="${hr*0.55}"
-                 fill="${p.ohr}" transform="rotate(-18, ${hx - hr*0.55}, ${hy + hr*0.10})"/>
-        <ellipse cx="${hx + hr*0.55}" cy="${hy + hr*0.10}" rx="${hr*0.30}" ry="${hr*0.55}"
-                 fill="${p.ohr}" transform="rotate(18, ${hx + hr*0.55}, ${hy + hr*0.10})"/>
+        <ellipse cx="${hx - hr * 0.55}" cy="${hy + hr * 0.10}" rx="${hr * 0.30}" ry="${hr * 0.55}"
+                 fill="${p.ohr}" transform="rotate(-18, ${hx - hr * 0.55}, ${hy + hr * 0.10})"/>
+        <ellipse cx="${hx + hr * 0.55}" cy="${hy + hr * 0.10}" rx="${hr * 0.30}" ry="${hr * 0.55}"
+                 fill="${p.ohr}" transform="rotate(18, ${hx + hr * 0.55}, ${hy + hr * 0.10})"/>
 
         <!-- Kopf -->
         <circle cx="${hx}" cy="${hy + hr}" r="${hr}" fill="${p.body}"/>
 
         <!-- Schnauze -->
-        <ellipse cx="${hx + hr*0.18}" cy="${hy + hr*1.42}" rx="${hr*0.52}" ry="${hr*0.35}" fill="${p.bauch}"/>
+        <ellipse cx="${hx + hr * 0.18}" cy="${hy + hr * 1.42}" rx="${hr * 0.52}" ry="${hr * 0.35}" fill="${p.bauch}"/>
         <!-- Nase -->
-        <ellipse cx="${hx + hr*0.18}" cy="${hy + hr*1.22}" rx="${hr*0.22}" ry="${hr*0.14}" fill="${p.nase}"/>
+        <ellipse cx="${hx + hr * 0.18}" cy="${hy + hr * 1.22}" rx="${hr * 0.22}" ry="${hr * 0.14}" fill="${p.nase}"/>
         <!-- Mund -->
-        <path d="M${hx + hr*0.0} ${hy + hr*1.48} Q${hx + hr*0.18} ${hy + hr*1.62} ${hx + hr*0.36} ${hy + hr*1.48}"
-          stroke="${p.nase}" stroke-width="${s*0.025}" fill="none" stroke-linecap="round"/>
+        <path d="M${hx + hr * 0.0} ${hy + hr * 1.48} Q${hx + hr * 0.18} ${hy + hr * 1.62} ${hx + hr * 0.36} ${hy + hr * 1.48}"
+          stroke="${p.nase}" stroke-width="${s * 0.025}" fill="none" stroke-linecap="round"/>
 
         <!-- Augen -->
-        <circle cx="${hx - hr*0.30}" cy="${hy + hr*0.80}" r="${hr*0.14}" fill="#222"/>
-        <circle cx="${hx + hr*0.55}" cy="${hy + hr*0.80}" r="${hr*0.14}" fill="#222"/>
-        <circle cx="${hx - hr*0.26}" cy="${hy + hr*0.75}" r="${hr*0.05}" fill="white"/>
-        <circle cx="${hx + hr*0.59}" cy="${hy + hr*0.75}" r="${hr*0.05}" fill="white"/>
+        <circle cx="${hx - hr * 0.30}" cy="${hy + hr * 0.80}" r="${hr * 0.14}" fill="#222"/>
+        <circle cx="${hx + hr * 0.55}" cy="${hy + hr * 0.80}" r="${hr * 0.14}" fill="#222"/>
+        <circle cx="${hx - hr * 0.26}" cy="${hy + hr * 0.75}" r="${hr * 0.05}" fill="white"/>
+        <circle cx="${hx + hr * 0.59}" cy="${hy + hr * 0.75}" r="${hr * 0.05}" fill="white"/>
 
         <!-- Accessoire -->
         ${acc}
@@ -475,7 +679,7 @@
       // Scene
       const scene = document.createElement("div");
       scene.className = "scene";
-      scene.style.width  = W + "px";
+      scene.style.width = W + "px";
       scene.style.height = H + "px";
 
       // Hintergrund-SVG
@@ -521,4 +725,5 @@
 
   </script>
 </body>
+
 </html>
