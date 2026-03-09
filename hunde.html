@@ -39,6 +39,12 @@
       letter-spacing: 1px;
       text-transform: uppercase;
     }
+    .dog-name {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #666;
+      font-weight: normal;
+    }
     .scene {
       position: relative;
       width: 300px;
@@ -117,9 +123,10 @@
     // BLOCK 1 – ANINA  (Zeilen dieses Blocks: hier nachschauen)
     // ─────────────────────────────────────────────────────────────
     const config_anina = {
-      name:        "Anina",
+      person:      "Anina",
+      hundName:    "Findelhund 1",
       // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
-      fellfarbe:   "golden",
+      fellfarbe:   "braun",
       // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
       hintergrund: "wiese",
       // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
@@ -127,8 +134,7 @@
       // Texte – beliebig viele Einträge in den eckigen Klammern
       texte: [
         "Wuff!",
-        "Ich bin Anina!",
-        "Git macht Spass!"
+        "Ich bin noch ungetauft 😢!"
       ]
     };
 
@@ -136,18 +142,22 @@
     // BLOCK 2 – TIM
     // ─────────────────────────────────────────────────────────────
     const config_tim = {
-      name:        "Tim",
+      person:      "Tim",
+      hundName:    "Ava",
       // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
-      fellfarbe:   "braun",
+      fellfarbe:   "schwarz",
       // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
-      hintergrund: "wald",
+      hintergrund: "stadt",
       // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
-      accessoire:  "hut",
+      accessoire:  "krone",
       // Texte – beliebig viele Einträge in den eckigen Klammern
       texte: [
-        "Wuff!",
-        "Ich bin Tim!",
-        "Commit nicht vergessen!"
+        "Wau!",
+        "Ich bin Ava!",
+        "Mir gehören die Straßen der Stadt!",
+        "Ich fresse Katzen! 🐈😈",
+        "Ich beisse Kinder!",
+        "Ich grabe die Toten unter dem Klosterplatz aus! 💀"
       ]
     };
 
@@ -155,18 +165,18 @@
     // BLOCK 3 – SVENJA
     // ─────────────────────────────────────────────────────────────
     const config_svenja = {
-      name:        "Svenja",
+      person:      "Svenja",
+      hundName:    "Findelhund 3",
       // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
-      fellfarbe:   "weiss",
+      fellfarbe:   "golden",
       // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
-      hintergrund: "strand",
+      hintergrund: "wiese",
       // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
-      accessoire:  "sonnenbrille",
+      accessoire:  "keins",
       // Texte – beliebig viele Einträge in den eckigen Klammern
       texte: [
-        "Wuff!",
-        "Ich bin Svenja!",
-        "Branch erstellt!"
+        "Jip!",
+        "Ich bin noch ungetauft 😢!"
       ]
     };
 
@@ -174,18 +184,18 @@
     // BLOCK 4 – RAINER
     // ─────────────────────────────────────────────────────────────
     const config_rainer = {
-      name:        "Rainer",
+      person:      "Rainer",
+      hundName:    "Findelhund 4",
       // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
-      fellfarbe:   "grau",
+      fellfarbe:   "weiss",
       // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
-      hintergrund: "stadt",
+      hintergrund: "wiese",
       // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
-      accessoire:  "halstuch",
+      accessoire:  "keins",
       // Texte – beliebig viele Einträge in den eckigen Klammern
       texte: [
-        "Wuff!",
-        "Ich bin Rainer!",
-        "Merge conflict?"
+        "Winsel!",
+        "Ich bin noch ungetauft 😢!"
       ]
     };
 
@@ -193,64 +203,8 @@
     // BLOCK 5 – CHRISTIAN
     // ─────────────────────────────────────────────────────────────
     const config_christian = {
-      name:        "Christian",
-      // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
-      fellfarbe:   "schwarz",
-      // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
-      hintergrund: "wald",
-      // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
-      accessoire:  "hut",
-      // Texte – beliebig viele Einträge in den eckigen Klammern
-      texte: [
-        "Wuff!",
-        "Ich bin Christian!",
-        "git pull bitte!"
-      ]
-    };
-
-    // ─────────────────────────────────────────────────────────────
-    // BLOCK 6 – HELENA
-    // ─────────────────────────────────────────────────────────────
-    const config_helena = {
-      name:        "Helena",
-      // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
-      fellfarbe:   "golden",
-      // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
-      hintergrund: "schnee",
-      // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
-      accessoire:  "halstuch",
-      // Texte – beliebig viele Einträge in den eckigen Klammern
-      texte: [
-        "Wuff!",
-        "Ich bin Helena!",
-        "README geschrieben!"
-      ]
-    };
-
-    // ─────────────────────────────────────────────────────────────
-    // BLOCK 7 – JONATHAN
-    // ─────────────────────────────────────────────────────────────
-    const config_jonathan = {
-      name:        "Jonathan",
-      // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
-      fellfarbe:   "braun",
-      // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
-      hintergrund: "strand",
-      // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
-      accessoire:  "sonnenbrille",
-      // Texte – beliebig viele Einträge in den eckigen Klammern
-      texte: [
-        "Wuff!",
-        "Ich bin Jonathan!",
-        "Push accepted!"
-      ]
-    };
-
-    // ─────────────────────────────────────────────────────────────
-    // BLOCK 8 – MICHAEL
-    // ─────────────────────────────────────────────────────────────
-    const config_michael = {
-      name:        "Michael",
+      person:      "Christian",
+      hundName:    "Findelhund 5",
       // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
       fellfarbe:   "grau",
       // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
@@ -259,9 +213,65 @@
       accessoire:  "keins",
       // Texte – beliebig viele Einträge in den eckigen Klammern
       texte: [
-        "Wuff!",
-        "Ich bin Michael!",
-        "Code reviewed!"
+        "Woof!",
+        "Ich bin noch ungetauft 😢!"
+      ]
+    };
+
+    // ─────────────────────────────────────────────────────────────
+    // BLOCK 6 – HELENA
+    // ─────────────────────────────────────────────────────────────
+    const config_helena = {
+      person:      "Helena",
+      hundName:    "Findelhund 6",
+      // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
+      fellfarbe:   "braun",
+      // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
+      hintergrund: "wiese",
+      // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
+      accessoire:  "keins",
+      // Texte – beliebig viele Einträge in den eckigen Klammern
+      texte: [
+        "Arf!",
+        "Ich bin noch ungetauft 😢!"
+      ]
+    };
+
+    // ─────────────────────────────────────────────────────────────
+    // BLOCK 7 – JONATHAN
+    // ─────────────────────────────────────────────────────────────
+    const config_jonathan = {
+      person:      "Jonathan",
+      hundName:    "Findelhund 7",
+      // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
+      fellfarbe:   "weiss",
+      // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
+      hintergrund: "wiese",
+      // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
+      accessoire:  "keins",
+      // Texte – beliebig viele Einträge in den eckigen Klammern
+      texte: [
+        "Yip!",
+        "Ich bin noch ungetauft 😢!"
+      ]
+    };
+
+    // ─────────────────────────────────────────────────────────────
+    // BLOCK 8 – MICHAEL
+    // ─────────────────────────────────────────────────────────────
+    const config_michael = {
+      person:      "Michael",
+      hundName:    "Findelhund 8",
+      // Fellfarbe – Auswahl: "braun", "schwarz", "golden", "weiss", "grau"
+      fellfarbe:   "golden",
+      // Hintergrund – Auswahl: "wiese", "schnee", "strand", "stadt", "wald", "wueste", "berge", "weltall", "haus"
+      hintergrund: "wiese",
+      // Accessoire – Auswahl: "hut", "sonnenbrille", "halstuch", "keins", "krone", "krawatte", "fliege", "halsband", "brille", "schleife", "muetze", "kappe", "kopfhoerer", "blume"
+      accessoire:  "keins",
+      // Texte – beliebig viele Einträge in den eckigen Klammern
+      texte: [
+        "Bowow!",
+        "Ich bin noch ungetauft 😢!"
       ]
     };
 
@@ -457,9 +467,9 @@
       const card = document.createElement("div");
       card.className = "card";
 
-      // Name
+      // Person-Name in der Heading
       const h2 = document.createElement("h2");
-      h2.textContent = config.name;
+      h2.textContent = config.person;
       card.appendChild(h2);
 
       // Scene
@@ -486,15 +496,23 @@
       dogWrap.innerHTML = hundSVG(config);
       scene.appendChild(dogWrap);
 
+      // Hund-Name unter dem Hund (klein)
+      const dogNameDiv = document.createElement("div");
+      dogNameDiv.className = "dog-name";
+      dogNameDiv.textContent = config.hundName;
+      scene.appendChild(dogNameDiv);
+
       card.appendChild(scene);
       container.appendChild(card);
 
-      // Text-Rotation
-      let idx = 0;
-      setInterval(() => {
-        idx = (idx + 1) % config.texte.length;
-        bubble.textContent = config.texte[idx];
-      }, 1000 + Math.random() * 500); // leicht versetzt, damit nicht alle gleichzeitig wechseln
+      // Text-Rotation (nur wenn mehr als ein Text vorhanden)
+      if (config.texte.length > 1) {
+        let idx = 0;
+        setInterval(() => {
+          idx = (idx + 1) % config.texte.length;
+          bubble.textContent = config.texte[idx];
+        }, 1000 + Math.random() * 500);
+      }
     }
 
     // ── Alle Hunde rendern ────────────────────────────────────────
